@@ -6,7 +6,7 @@ import qs.Commons
 import qs.Ui
 
 // Minimal web-search overlay. Summoned by the shell
-// (`omarchy-shell shell toggle oxhenri.spotlight`); the shell calls
+// (`omarchy-shell shell toggle oxhenri.search`); the shell calls
 // open()/close()/dismiss() and supplies `shell` + `manifest`.
 //
 // Type a query — Google autocomplete suggests while you type.
@@ -54,7 +54,7 @@ Item {
   function dismiss() {
     root.opened = false
     if (root.shell && typeof root.shell.hide === "function")
-      root.shell.hide((root.manifest && root.manifest.id) || "oxhenri.spotlight")
+      root.shell.hide((root.manifest && root.manifest.id) || "oxhenri.search")
   }
 
   function toggle() {
@@ -112,7 +112,7 @@ Item {
     visible: root.opened
     anchors { top: true; bottom: true; left: true; right: true }
     color: "transparent"
-    WlrLayershell.namespace: "oxhenri-spotlight"
+    WlrLayershell.namespace: "oxhenri-search"
     WlrLayershell.layer: WlrLayer.Overlay
     WlrLayershell.keyboardFocus: WlrKeyboardFocus.Exclusive
     exclusionMode: ExclusionMode.Ignore

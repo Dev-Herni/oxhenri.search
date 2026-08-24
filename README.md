@@ -1,4 +1,4 @@
-# oxhenri.Search
+# oxhenri.search
 
 Minimal Google web-search overlay for [Omarchy](https://github.com/basecamp/omarchy) (Quickshell).
 
@@ -8,14 +8,14 @@ Stays loaded (`keepLoaded`) so summoning is instant.
 ## Install
 
 ```sh
-git clone https://github.com/Dev-Herni/oxhenri.spotlight.git \
-  ~/.config/omarchy/plugins/oxhenri.spotlight
+git clone https://github.com/Dev-Herni/oxhenri.search.git \
+  ~/.config/omarchy/plugins/oxhenri.search
 ```
 
 Bind a key to the overlay via Omarchy's keybinding settings, or summon it with:
 
 ```sh
-omarchy-shell shell summon oxhenri.spotlight '{}'
+omarchy-shell shell summon oxhenri.search '{}'
 ```
 
 ## Requirements
@@ -27,7 +27,7 @@ omarchy-shell shell summon oxhenri.spotlight '{}'
 ## Removal
 
 ```bash
-omarchy plugin remove oxhenri.spotlight --yes
+omarchy plugin remove oxhenri.search --yes
 ```
 
 The overlay creates no files outside its own folder.
