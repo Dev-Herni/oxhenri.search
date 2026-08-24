@@ -18,6 +18,20 @@ Bind a key to the overlay via Omarchy's keybinding settings, or summon it with:
 omarchy-shell shell summon oxhenri.spotlight '{}'
 ```
 
+## Requirements
+
+- [Chromium](https://www.chromium.org/) — search results open as new Chromium
+  tabs (installed by default on Omarchy)
+- Network access for Google search
+
+## Removal
+
+```bash
+omarchy plugin remove oxhenri.spotlight --yes
+```
+
+The overlay creates no files outside its own folder.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
