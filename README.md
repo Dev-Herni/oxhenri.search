@@ -1,4 +1,4 @@
-# oxhenri.spotlight
+# oxhenri.Search
 
 Minimal Google web-search overlay for [Omarchy](https://github.com/basecamp/omarchy) (Quickshell).
 
