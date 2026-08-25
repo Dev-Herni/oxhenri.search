@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "id": "oxhenri.search",
   "name": "Search",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": "oxhenri",
-  "description": "Minimal Google web-search overlay for Omarchy — type, Enter, opens in Chromium",
+  "description": "Web-search overlay for Omarchy — type, pick a suggestion, Enter opens results in your browser",
   "kinds": ["overlay"],
   "keepLoaded": true,
   "entryPoints": {
-    "overlay": "Spotlight.qml"
+    "overlay": "Search.qml"
   }
 }

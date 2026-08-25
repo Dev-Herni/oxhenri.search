@@ -1,36 +1,53 @@
 # oxhenri.search
 
-Minimal Google web-search overlay for [Omarchy](https://github.com/basecamp/omarchy) (Quickshell).
+Web-search overlay for [Omarchy](https://github.com/basecamp/omarchy).
+Same surface as the Omarchy menu: type a query, pick a suggestion, **Enter**
+opens results in your default browser.
 
-Summon the overlay, type a query, press **Enter** — results open in Chromium.
-Stays loaded (`keepLoaded`) so summoning is instant.
+![Search overlay](preview.png)
 
 ## Install
 
 ```sh
-git clone https://github.com/Dev-Herni/oxhenri.search.git \
-  ~/.config/omarchy/plugins/oxhenri.search
+omarchy plugin add https://github.com/Dev-Herni/oxhenri.search.git --enable
 ```
 
-Bind a key to the overlay via Omarchy's keybinding settings, or summon it with:
+Bind a hotkey in `~/.config/hypr/bindings.lua`:
 
-```sh
-omarchy-shell shell summon oxhenri.search '{}'
+```lua
+o.bind("SUPER + SHIFT + L", "Web search", "omarchy-shell shell toggle oxhenri.search")
 ```
+
+Then `hyprctl reload`. Press **Super+Shift+L** to search.
+Any free combo works — change `SUPER + SHIFT + L` if you prefer.
+You can also edit this from **Omarchy menu → Setup → Keybindings**.
+
+## Keys
+
+| Key | Action |
+|-----|--------|
+| Type | Live suggestions appear |
+| `↑` `↓` | Move through suggestions |
+| `Tab` | Fill the selected suggestion into the search box |
+| `Enter` | Search — opens results in your browser |
+| Click a suggestion | Search it right away |
+| `Esc` / click outside | Close the overlay |
 
 ## Requirements
 
-- [Chromium](https://www.chromium.org/) — search results open as new Chromium
-  tabs (installed by default on Omarchy)
-- Network access for Google search
+- [Omarchy](https://github.com/basecamp/omarchy) / `omarchy-shell`
+- Network access for [Google Suggest](https://suggestqueries.google.com/) and search
+- A default browser (`xdg-open`)
 
-## Removal
+No extra packages. The plugin writes no files outside its own folder.
 
-```bash
+## Uninstall
+
+```sh
 omarchy plugin remove oxhenri.search --yes
 ```
 
-The overlay creates no files outside its own folder.
+Remove the keybinding from `~/.config/hypr/bindings.lua` if you added one.
 
 ## License
 

@@ -1,2 +1,6 @@
-__pycache__/
-*.pyc
+# QML/JS caches
+*.qmlc
+*.jsc
+
+# OS noise
+.DS_Store
